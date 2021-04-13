@@ -51,7 +51,7 @@ public class JavaScriptFrameworkService {
     }
 
     public FrameworkDTO insert(final FrameworkRequestDTO frameworkRequestDTO) {
-        if (frameworkRequestDTO == null || frameworkRequestDTO.getName() == null) {
+        if (frameworkRequestDTO == null || frameworkRequestDTO.getName() == null || frameworkRequestDTO.getName().isEmpty()) {
             throw new InvalidRequestException("Invalid request");
         }
 
@@ -63,7 +63,7 @@ public class JavaScriptFrameworkService {
     }
 
     public FrameworkDTO edit(final FrameworkRequestDTO frameworkRequestDTO, final long id) {
-        if (frameworkRequestDTO == null || frameworkRequestDTO.getName() == null) {
+        if (frameworkRequestDTO == null || frameworkRequestDTO.getName() == null || frameworkRequestDTO.getName().isEmpty()) {
             throw new InvalidRequestException("Invalid request");
         }
 

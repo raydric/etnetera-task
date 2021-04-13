@@ -149,6 +149,8 @@ public class JavaScriptFrameworkServiceTest {
         doNothing().when(repository).deleteById(1L);
 
         service.deleteById(1L);
+
+        verify(repository, times(1)).deleteById(1L);
     }
 
     @Test(expected = FrameworkNotFoundException.class)
